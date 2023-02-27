@@ -22,17 +22,7 @@ LANGUAGE_CODES=sorted(list(tokenizer.LANGUAGES.keys()))
 
 projectMetadata = importlib.metadata.metadata('whisper-asr-webservice')
 app = FastAPI(
-    title=projectMetadata['Name'].title().replace('-', ' '),
-    description=projectMetadata['Summary'],
-    version=projectMetadata['Version'],
-    contact={
-        "url": projectMetadata['Home-page']
-    },
     swagger_ui_parameters={"defaultModelsExpandDepth": -1},
-    license_info={
-        "name": "MIT License",
-        "url": projectMetadata['License']
-    }
 )
 
 assets_path = fastapi_offline_swagger_ui.__path__[0]
