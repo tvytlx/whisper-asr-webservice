@@ -20,7 +20,6 @@ import importlib.metadata
 SAMPLE_RATE=16000
 LANGUAGE_CODES=sorted(list(tokenizer.LANGUAGES.keys()))
 
-projectMetadata = importlib.metadata.metadata('whisper-asr-webservice')
 app = FastAPI(
     swagger_ui_parameters={"defaultModelsExpandDepth": -1},
 )
