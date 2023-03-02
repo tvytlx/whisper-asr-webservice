@@ -73,6 +73,10 @@ def transcribe(
     else:
         return 'Please select an output method!'
     myFile.seek(0)
+
+    if output == 'text':
+        return StreamingResponse(myFile, media_type="text/plain")
+
     return StreamingResponse(myFile, media_type="text/plain", 
                             headers={'Content-Disposition': f'attachment; filename="{filename}.{output}"'})
 

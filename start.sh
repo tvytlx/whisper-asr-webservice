@@ -1,1 +1,1 @@
-sudo gunicorn --bind 0.0.0.0:80 --workers 3 --timeout 30 app.webservice:app -k uvicorn.workers.UvicornWorker
+sudo /home/tvytlx/.pyenv/shims/gunicorn --bind 0.0.0.0:80 --workers 1 --timeout 0 app.webservice:app -k uvicorn.workers.UvicornWorker
